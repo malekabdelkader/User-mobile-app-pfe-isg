@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+    </ion-buttons>
+    <ion-title>
+        Connexion
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card">
+        <ion-img src="/assets/park3.jpg"></ion-img>
+        <ion-card-header>
+        <ion-card-subtitle>Smart Parking</ion-card-subtitle>
+        <ion-card-title>Bienvenue</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+<form (ngSubmit)="Searchannonce()" >
+<ion-item>
+  <ion-label position="floating">E-mail</ion-label>
+  <ion-input name="email"  [(ngModel)]="user.email" type="email"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Mot de passe</ion-label>
+  <ion-input name="password"  [(ngModel)]="user.password" type="password"></ion-input>
+</ion-item>
+<h6 style="color: red">{{invalide}}</h6>
+<ion-button type="submit" expand="block">Connexion</ion-button>
+<br>
+  <h2 style="text-align: center"> <a  href="/list">S'abonner</a></h2> 
+
+</form>
+      </ion-card-content>
+    </ion-card>
+   
+</ion-content>

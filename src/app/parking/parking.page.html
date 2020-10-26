@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>Parking</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-list>
+<ion-item>
+  <ion-icon name="car"> </ion-icon>
+  <ion-label style="margin-left: 5%"> Places :</ion-label>
+</ion-item>
+<ion-item><ion-label>Capacité </ion-label>{{totale}}</ion-item>
+<ion-item><ion-label>Réservées</ion-label>{{capacite}}</ion-item>
+<ion-item  href="/parking">
+<ion-icon style="margin-left: 37%" name="refresh-circle"></ion-icon>
+<label style="color: lightseagreen">Actualiser</label>
+</ion-item>
+</ion-list>
+<ion-item>
+    <ion-icon name="locate"></ion-icon>
+    <ion-label style="margin-left: 5%"> Map :</ion-label>
+  </ion-item>
+<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Parking" src="//www.arcgis.com/apps/Embed/index.html?webmap=38bcf284174e4e9894037da31a338c3f&extent=10.0884,33.882,10.094,33.8844&zoom=true&previewImage=false&scale=true&disable_scroll=true&theme=light"></iframe>
+<ion-content>
+
+</ion-content>

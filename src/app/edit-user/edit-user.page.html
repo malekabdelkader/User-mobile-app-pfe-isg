@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>Modifier profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card">
+        <ion-img src="/assets/park3.jpg"></ion-img>
+        <ion-card-header>
+        <ion-card-subtitle>Smart Parking</ion-card-subtitle>
+        <ion-card-title>{{user.nom}} {{user.prenom}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+      <form (ngSubmit)="updateForm()">
+        <ion-item>
+            <ion-label width="30%">Télephone</ion-label>
+            <ion-input [(ngModel)]="user.telephone"  name="telephonee" type="number" ></ion-input>
+        </ion-item>
+       
+        <ion-item>
+            <ion-label width="30%" >E-mail</ion-label>
+            <ion-input [(ngModel)]="user.email" name="emailll"  type="email" ></ion-input>
+       </ion-item>
+
+       <ion-item>
+          <ion-label width="30%">Mot de passe</ion-label>
+          <ion-input [(ngModel)]="user.password"   name="passwordd"   type="password" ></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label width="30%">Matricule</ion-label>
+            <ion-input [(ngModel)]="user.matricule" name="matriculee" type="text"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+            <ion-label style="color: red" width="30%">{{show}}</ion-label>
+        </ion-item>
+        <ion-button *ngIf="((capacite!='7')&&(capacite!='6')&&(capacite!='5')&&(capacite!='4')&&(capacite!='3')&&(capacite!='2')&&(capacite!='1')&&(capacite!='0'))" type="submit" expand="block">
+            Sauvgarder
+        </ion-button>
+
+      </form></ion-card-content></ion-card></ion-content>

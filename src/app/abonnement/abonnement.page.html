@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+          Abonnement
+         </ion-title>
+         
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+  <ion-item href="/signin">
+    <ion-icon name="add-circle-outline"></ion-icon> 
+     <label style="margin-left: 5%"  > Ajouter</label>
+</ion-item>
+    <ion-list *ngFor="let abonnement of Abonnement">
+      <ion-item *ngIf="abonnement.email==email">
+        <ion-icon name="pricetag"></ion-icon>
+      <ion-title style="color: darkcyan">Abonnement :</ion-title>
+    </ion-item>
+        <ion-item *ngIf="abonnement.email==email">
+          <ion-label>Code</ion-label>{{abonnement.code}}
+        </ion-item>
+        <ion-item *ngIf="abonnement.email==email">
+          <ion-label>Début</ion-label>{{abonnement.mode}}
+        </ion-item>
+        <ion-item *ngIf="abonnement.email==email">
+          <ion-label>Expiration</ion-label>{{abonnement.expiration}}
+        </ion-item>
+      </ion-list>
+ 
+</ion-content>
